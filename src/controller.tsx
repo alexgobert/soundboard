@@ -1,7 +1,6 @@
 import { readlink } from 'fs'
 import React, { useRef, useState, useEffect } from 'react'
 import Pad from './pad'
-import Recorder from './Recorder'
 const { myIpcRenderer } = window
 
 
@@ -176,10 +175,10 @@ const Controller : React.FunctionComponent = () => {
                         <input className="slider" type="range" min="0" max="50" onInput={handleVirtualVolumeChange} ref={virtualVolumeRef}></input>
                     </div>
                 </div>
-
-                <Recorder></Recorder>
             
-            
+                <div id="stop">
+                    <button>Stop</button>
+                </div>
             </div>
 
 
